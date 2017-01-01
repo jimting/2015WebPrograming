@@ -1,0 +1,43 @@
+#aboutus
+{
+	position:fixed;
+	text-align:center;
+	margin-left:35%;
+}
+#huai
+{
+	position:fixed;
+	margin-left:15%;
+}
+#jt
+{
+	position:absolute;
+	margin-left:70%;
+}
+#intro
+{
+	position:absolute;
+	background-color:#F8F8F8;
+	border-style:dashed;
+	border-width:2px;
+	border-color:#333399;
+	margin-left:30%;
+	margin-top:10%;
+	font-size:16px;
+	color:#6633FF;
+	width:600px;
+	height:350px;
+}
+#secret
+{
+	font-size:48px;
+}
+#us
+{
+	font-size:24px;
+}
+#download
+{
+	margin-left:350px;
+	margin-top:600px;
+}

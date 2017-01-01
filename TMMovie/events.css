@@ -1,0 +1,23 @@
+#text
+{
+	margin-left:350px;
+	color:blue;
+	font-size:45px;
+}
+#link
+{
+	margin-left:1200px;
+	position:fixed;
+	font-size:24px;
+}
+#img
+{
+	height:100px;
+	width:300px;
+	border-radius:40px;
+}
+#img:hover
+{
+	margin-left:1px;
+	margin-top:1px;
+}

@@ -1,0 +1,226 @@
+#p1
+{
+	margin-left:0px;
+	width:200px;
+	height:200px;
+	border:solid;
+	border-color:white;
+	border-width:4px;
+	position:fixed;
+}
+#p2
+{
+	margin-left:200px;
+	width:200px;
+	height:200px;
+	border:solid;
+	border-color:white;
+	border-width:4px;
+	position:fixed;
+}
+#p3
+{
+	margin-left:400px;
+	width:200px;
+	height:200px;
+	border:solid;
+	border-color:white;
+	border-width:4px;
+	position:fixed;
+}
+#p4
+{
+	margin-top:200px;
+	margin-left:0px;
+	width:200px;
+	height:200px;
+	border:solid;
+	border-color:white;
+	border-width:4px;
+	position:fixed;
+}
+#p5
+{
+	margin-top:200px;
+	margin-left:200px;
+	width:200px;
+	height:200px;
+	border:solid;
+	border-color:white;
+	border-width:4px;
+	position:fixed;
+}
+#p6
+{
+	margin-top:200px;
+	margin-left:400px;
+	width:200px;
+	height:200px;
+	border:solid;
+	border-color:white;
+	border-width:4px;
+	position:fixed;
+}
+#p7
+{
+	margin-top:400px;
+	margin-left:0px;
+	width:200px;
+	height:200px;
+	border:solid;
+	border-color:white;
+	border-width:4px;
+	position:fixed;
+}
+#p8
+{
+	margin-top:400px;
+	margin-left:200px;
+	width:200px;
+	height:200px;
+	border:solid;
+	border-color:white;
+	border-width:4px;
+	position:fixed;
+}
+#p9
+{
+	margin-top:400px;
+	margin-left:400px;
+	width:200px;
+	height:200px;
+	border:solid;
+	border-color:white;
+	border-width:4px;
+	position:fixed;
+}
+#alldrama
+{
+	margin-left:300px;
+	margin-top:50px;
+}
+.choose
+{
+	position:absolute;
+}
+#newwindows
+{
+	width:600px;
+	height:600px;
+	border:solid;
+	border-color:white;
+	border-width:4px;
+	border-radius:20px;
+}
+#new
+{
+	z-index:101;
+	position:fixed;
+}
+#goback
+{
+	z-index:102;
+	position:fixed;
+}
+#gobacktext
+{
+	color:white;
+	margin-top:530px;
+	margin-left:10px;
+	background-color:black;
+	font-size:50px;
+	border-radius:40px;
+	opacity:0.6;
+	font-family:Brush;
+	position:fixed;
+}
+#gobacktext:hover
+{
+	background-color:gray;
+}
+#dramaintro
+{
+	position:fixed;
+	font-family:"chmovie",標楷體;
+	margin-left:950px;
+	height:350px;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+#Chinese
+{
+	font-size:48px;
+}
+#English
+{
+	font-family:"Brush";
+}
+#introtext
+{
+	font-size:24px;
+}
+#dramabutton
+{
+	margin-left:950px;
+	margin-top:350px;
+	height:100px;
+	overflow-x:hidden;
+	overflow-y:auto;
+	position:fixed;
+	z-index:102;
+}
+#frame
+{
+	margin-left:950px;
+	margin-top:500px;
+	height:300px;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+#partbutton
+{
+	-moz-box-shadow:inset 0px 1px 0px 0px #f5978e;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f5978e;
+	box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24537), color-stop(1, #c62d1f));
+	background:-moz-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+	background:-webkit-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+	background:-o-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+	background:-ms-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f',GradientType=0);
+	background-color:#f24537;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+	
+}
+#partbutton:hover
+{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537));
+	background:-moz-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+	background:-webkit-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+	background:-o-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+	background:-ms-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537',GradientType=0);
+	background-color:#c62d1f;
+}
+#dramaplay
+{
+	border-radius:10px;
+}
+#attention
+{
+	color:red;
+}
