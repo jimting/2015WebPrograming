@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8">
+  <title>HW4-2</title>
+  <style>
+	body
+	{
+		font-family:Microsoft YaHei;
+	}
+	td
+	{
+		direction:rtl;
+	}
+	.x
+	{
+		background-color : #BBFFFF;
+	}
+	th
+	{
+		color :white;
+		background-color:blue;
+	}
+	
+  </style>
+</head>
+
+<body>
+	<table border = '1'>
+		<caption>Earnings for salepeople</caption>
+		<thead>
+			<tr> 
+				<th>Product</th> 
+				<th width = '70px'>Unit<br>Price</th>
+				<th>Qunatity</th>
+				<th>Subtatol</th>
+			</tr>
+		</thead>
+		<script type='text/javascript'>
+			var U1;
+			var U2;
+			var U3;
+			var U4;
+			var Q1;
+			var Q2;
+			var Q3;
+			var Q4;
+			var S1;
+			var S2;
+			var S3;
+			var S4;
+			var total;
+			var earns;
+			U1 = window.prompt("Please input the Unit Price of product no.1");
+			U2 = window.prompt("Please input the Unit Price of product no.2");
+			U3 = window.prompt("Please input the Unit Price of product no.3");
+			U4 = window.prompt("Please input the Unit Price of product no.4");
+			Q1 = window.prompt("Please input the quantity of product no.1");
+			Q2 = window.prompt("Please input the quantity of product no.2");
+			Q3 = window.prompt("Please input the quantity of product no.3");
+			Q4 = window.prompt("Please input the quantity of product no.4");
+			U1 = U1*1.0;
+			U2 = U2*1.0;
+			U3 = U3*1.0;
+			U4 = U4*1.0;
+			S1 = Q1*U1;
+			S2 = Q2*U2;
+			S3 = Q3*U3;
+			S4 = Q4*U4;
+			total = S1+S2+S3+S4;
+			earns = 200+total*0.09;
+		</script>
+		<tfoot>
+			<tr>
+				<th colspan = 3>Total</th>
+				<td><script>document.write(total.toFixed(1));</script></td>
+			</tr>
+			<tr>
+				<th colspan = 3>Earnings</th>
+				<td class = x><script>document.write(earns.toFixed(1));</script></td>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td><script>document.write(U1.toFixed(1));</script></td>
+				<td><script>document.write(Q1);</script></td>
+				<td><script>document.write(S1.toFixed(1));</script></td>
+			</tr>
+			<tr class = x>
+				<td>2</td>
+				<td><script>document.write(U2.toFixed(1));</script></td>
+				<td><script>document.write(Q2);</script></td>
+				<td><script>document.write(S2.toFixed(1));</script></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td><script>document.write(U3.toFixed(1));</script></td>
+				<td><script>document.write(Q3);</script></td>
+				<td><script>document.write(S3.toFixed(1));</script></td>
+			</tr>
+			<tr class = x>
+				<td>4</td>
+				<td><script>document.write(U4.toFixed(1));</script></td>
+				<td><script>document.write(Q4);</script></td>
+				<td><script>document.write(S4.toFixed(1));</script></td>
+			</tr>
+		</tbody>
+		</table>
+</body>
+</html> 

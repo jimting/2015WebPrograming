@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>hw8-2</title> 
+	  <style type = "text/css">
+	  body{font-family:微軟正黑體;}
+	  p{color:blue;}
+	  </style>
+      <script>
+         // variables used to interact with the img elements
+		 var photo = ['01','02','03','04','05','06','07','08','09','10'];
+		 var b = ["任意門","時光機","竹蜻蜓","時光布","記憶麵包","縮小燈","翻譯蒟蒻","如果電話亭","穿透環","更衣照相機"];
+         function start()
+         {
+			document.getElementById("demo2").innerHTML = "請按下Button抽出道具";
+            var button = document.getElementById( "DG" );
+            button.addEventListener( "click", getDG, false );
+			var productSound = document.getElementById( "productSound");
+			productSound.addEventListener( "ended", changephoto, false );
+         } // end function start
+
+         function getDG()
+         {
+			document.getElementById("demo2").innerHTML = "請按下Button抽出道具";
+			document.getElementById("demo").innerHTML = "<img src='blank.png'>"; //initial photo
+			play_click();
+         }
+		 function changephoto()
+		 {
+			var i = Math.floor(Math.random() * 10 );
+			document.getElementById("demo").innerHTML = "<img src='" + photo[i] + ".png'>";
+			document.getElementById("demo2").innerHTML = "<p>您抽到"+b[i] + "</p>";
+		 }
+		 function play_click()
+		 {
+			var sound = document.getElementById("productSound");
+			sound.play();
+			}
+         window.addEventListener( "load", start, false );
+      </script>
+   </head>
+   <body> 
+	<audio id = "productSound" preload = "auto">
+	<source src = "doraemon.mp3" type = "audio/mpeg">
+	</audio>   
+	  <div id ="demo"><img src='blank.png'></div>
+	  <form action = "#">
+         <input id = "DG" type = "button" value = "抽道具！" style ="width: 200px; margin-top:10px;">
+      </form>
+	  <div id = "demo2"></div>
+   </body>
+</html>

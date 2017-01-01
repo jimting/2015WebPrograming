@@ -1,0 +1,46 @@
+<!DOCTYPE = html>
+
+<html>
+<head>
+<script>
+var a = ["林益全","林智勝","胡金龍","高國輝","陳金鋒","彭政閔","鄭凱文"];
+var xplace;
+var yplace;
+var randomtop;
+function start()
+{
+	shuffle();
+	set();
+}
+function shuffle()
+{
+	var shuffle = Math.floor(Math.random() * 7);
+		for(var i = 0;i < 7;i++)
+		{
+			var temp;
+			temp = a[shuffle];
+			a[shuffle] = a[i];
+			a[i] = temp;
+		}
+	}
+function set()
+{
+	var setphoto = document.getElementById("photo");
+	setphoto.innerHTML = " "; //清空區域
+	for(var i = 0;i < 7;i++)
+	{
+		xplace = Math.random() * 400;
+		yplace = Math.random() * 400;
+		randomtop = Math.random() * 10;
+		setphoto.innerHTML += "<img src = '"+a[i]+
+							".jpg' style = 'position: absolute; top: " + xplace +
+							"px; left: "+ yplace +"px; z-index:"+randomtop+"' >";
+	}
+}
+window.addEventListener( "load", start, false );
+</script>
+</head>
+<body>
+<div id="photo"></div>
+</body>
+</html>

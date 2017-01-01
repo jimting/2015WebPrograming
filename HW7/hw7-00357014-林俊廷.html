@@ -1,0 +1,77 @@
+<!DOCTYPE = html>
+
+<html>
+<head>
+<title>HW7</title>
+<style>
+body
+{
+	font-family:Calibri;
+	font-size:16px;
+}
+span
+{
+	background-color:#FF9933;
+}
+</style>
+<script>
+var article1 = ["The ","A ","One ","Some ","Any "];
+var article2 = ["the ","a ","one ","some ","any "];
+var noun1 = ["boy ","girl ","dog ","cat ","car "];
+var noun2 =	["boy.","girl.","dog.","cat.","car."];
+var verb = ["drove","jumped","ran","walked","skipped"];
+var pre = [" to "," from "," over "," under "," on "];
+
+function start()
+{
+	var button = document.getElementById( "talk" );
+    button.addEventListener( "click", start2, false );
+}
+function start2()
+{
+	var times = document.getElementById("time").value;
+	if (isNaN(times) || times<0)
+		times = 10;
+	document.getElementById("result").innerHTML = "Once upon a time...<br><br>"; //²MªÅ°Ï°ì;
+	shuffle(article1);
+	shuffle(article2);
+	shuffle(noun1);
+	shuffle(noun2);
+	shuffle(verb);
+	shuffle(pre);
+	for(var i=0;i < times;i++)
+	{
+		var a = Math.floor(Math.random() * 5);
+		var b = Math.floor(Math.random() * 5);
+		var c = Math.floor(Math.random() * 5);
+		var d = Math.floor(Math.random() * 5);
+		var e = Math.floor(Math.random() * 5);
+		var f = Math.floor(Math.random() * 5);
+		document.getElementById("result").innerHTML += article1[a] + noun1[b] + "<span>" +verb[c] +"</span>" + pre[d] + article2[e] + noun2[f] + "<br><br>";
+	}
+	document.getElementById("result").innerHTML += "<br>THE END";
+}
+function shuffle(a)
+{
+	var shuffle = Math.floor(Math.random() * 5);
+		for(var i = 0;i < 5;i++)
+		{
+			var temp;
+			temp = a[shuffle];
+			a[shuffle] = a[i];
+			a[i] = temp;
+		}
+	}
+window.addEventListener("load", start, false );
+</script>
+</head>
+<body>
+<div id="result" style = "width: 30%; height: 400px; overflow: scroll; background-color:#FFFFCC" ></div>
+<form action = "#">
+         <p><label># of sentences:
+            <input id = "time"></label>
+			<input id = "talk" type = "button" 
+               value = "Generate Short Story"></p>
+      </form>
+</body>
+</html>

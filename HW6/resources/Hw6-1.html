@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>hw6-1</title>
+<style>
+	table {
+	border-collapse: collapse;
+	font-family: Courier;
+}
+table, td, th {
+	border: 1px solid black;
+	padding: 4px;
+}
+th {
+	text-align: left;
+	background-color: lightblue;
+}
+td {
+	text-align: right;
+}
+</style><script>
+	var a = new Array(9);
+	for(var x = 0; x < 9;x++)
+		a[x] = 0;
+	function start()
+	{
+            var button = document.getElementById("Button" );
+            button.addEventListener( "click", change, false );
+    }
+	function change()
+	{
+			
+            var input = document.getElementById( "Input" ).value;
+			input = salary(input);
+            document.getElementById( "Salary" ).innerHTML = "Salary:"+input;
+			if(input>=200 && input <300)
+			{
+				a[1] = a[1]+1;
+				document.getElementById( "tda" ).innerHTML = a[1];
+			}
+			if(input>=300 && input < 400)
+			{
+				a[2] = a[2]+1;
+				document.getElementById( "tdb" ).innerHTML = a[2];
+			}
+			if(input>=400 && input < 500)
+			{
+				a[3] = a[3]+1;
+				document.getElementById( "tdc" ).innerHTML = a[3];
+			}
+			if(input>=500 && input < 600)
+			{
+				a[4] = a[4]+1;
+				document.getElementById( "tdd" ).innerHTML = a[4];
+			}
+			if(input>=600 && input <700)
+			{
+				a[5] = a[5]+1;
+				document.getElementById( "tde" ).innerHTML = a[5];
+			}
+			if(input>=700 && input < 800)
+			{
+				a[6] = a[6]+1;
+				document.getElementById( "tdf" ).innerHTML = a[6];
+			}
+			if(input>=800 && input < 900)
+			{
+				a[7] = a[7]+1;
+				document.getElementById( "tdg" ).innerHTML = a[7];
+			}
+			if(input>=900 && input < 1000)
+			{
+				a[8] = a[8]+1;
+				document.getElementById( "tdh" ).innerHTML = a[8];
+			}
+			if(input>=1000)
+			{
+				a[0] = a[0]+1;
+				document.getElementById( "tdi" ).innerHTML = a[0];
+			}
+	}
+	function salary(input)
+	{
+			return input * 0.09 + 200;
+	}
+		 window.addEventListener( "load", start, false );
+</script></head>
+<body>
+<p><label>Enter sales amount:<br>
+            <input id = "Input" type = "number"></label>
+            <input id = "Button" type = "button" 
+               value = "Submit"><a id = "Salary"></a><br><br>
+			   
+Number of people who earned salaries in the following ranges:<br>
+<table><tbody>
+<tr><th>(a) $200-$299</th><td id="tda">0</td></tr>
+<tr><th>(b) $300-$399</th><td id="tdb">0</td></tr>
+<tr><th>(c) $400-$499</th><td id="tdc">0</td></tr>
+<tr><th>(d) $500-$599</th><td id="tdd">0</td></tr>
+<tr><th>(e) $600-$699</th><td id="tde">0</td></tr>
+<tr><th>(f) $700-$799</th><td id="tdf">0</td></tr>
+<tr><th>(g) $800-$899</th><td id="tdg">0</td></tr>
+<tr><th>(h) $900-$999</th><td id="tdh">0</td></tr>
+<tr><th>(i) $1000 and over</th><td id="tdi">0</td></tr>
+</tbody></table>
+</body>
+</html>

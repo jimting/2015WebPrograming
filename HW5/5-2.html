@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Random Dice Images</title> 
+      <style type = "text/css">
+         li { display: inline; margin-right: 10px; }
+         ul { margin: 0; }
+		 p
+		 {
+			color:blue;
+		 }
+      </style>
+      <script>
+         // variables used to interact with the img elements
+         var die1Image;
+         var die2Image;
+         var die3Image;
+         var die4Image;
+		 var a = new Array(4);
+		 var i = 0;
+
+         // register button listener and get the img elements
+         function start()
+         {
+            var button = document.getElementById( "rollButton" );
+            button.addEventListener( "click", rollDice, false );
+            die1Image = document.getElementById( "die1" );
+            die2Image = document.getElementById( "die2" );
+            die3Image = document.getElementById( "die3" );
+            die4Image = document.getElementById( "die4" );
+			
+         } // end function start
+
+		function start2()
+		{
+			var button = document.getElementById( "cutButton" );
+			button.addEventListener( "click", cutDice, false );
+		}
+		function cutDice()
+         {
+            cutImage();
+			document.getElementById( "demo" ).innerHTML = '<p>Congratulations！Your roll is "一色"</p><img src = "congrats.jpg"></img>';
+         }
+         function rollDice()
+         {
+			i = 0;
+            setImage( die1Image );
+            setImage( die2Image );
+            setImage( die3Image );
+            setImage( die4Image );
+			check();
+         }
+         function setImage( dieImg )
+         {
+            var dieValue = Math.floor( 1 + Math.random() * 6 );
+            dieImg.setAttribute( "src", "die" + dieValue + ".png" );
+            dieImg.setAttribute( "alt", 
+               "die image with " + dieValue + " spot(s)" );
+			   a[i] = dieValue ;
+			   i++;
+         }
+		 function cutImage()
+         {
+            var dieValue = Math.floor( 1 + Math.random() * 6 );
+            die1Image.setAttribute( "src", "die" + dieValue + ".png" );
+            die1Image.setAttribute( "alt", 
+               "die image with " + dieValue + " spot(s)" );
+			die2Image.setAttribute( "src", "die" + dieValue + ".png" );
+            die2Image.setAttribute( "alt", 
+               "die image with " + dieValue + " spot(s)" );
+			die3Image.setAttribute( "src", "die" + dieValue + ".png" );
+            die3Image.setAttribute( "alt", 
+               "die image with " + dieValue + " spot(s)" );
+			die4Image.setAttribute( "src", "die" + dieValue + ".png" );
+            die4Image.setAttribute( "alt", 
+               "die image with " + dieValue + " spot(s)" );
+         }
+		 function check()
+		 {
+			if(a[0] == a[1] && a[1] == a[2] && a[2] == a[3])
+			{
+			document.getElementById( "demo" ).innerHTML = '<p>Congratulations！Your roll is "一色"</p><img src = "congrats.jpg"></img>';
+			}
+			else if(a[0] !== a[1] && a[1] !== a[2] && a[2] !== a[3] && a[3] !== a[0] && a[0] !== a[2] && a[1] !== a[3])
+			{
+				document.getElementById( "demo" ).innerHTML = '<p>OOPS！Your roll is "無面"</p><img src = "oops.jpg"></img>';
+			}
+			else
+			{
+				document.getElementById( "demo" ).innerHTML = "<p>No decision!Please re-roll the die!</p>";
+			}
+		 }
+         window.addEventListener( "load", start, false );
+		 window.addEventListener( "load", start2, false );
+      </script>
+   </head>
+   <body>
+      <form action = "#">
+         <input id = "rollButton" type = "button" value = "Roll Dice">
+		 <input id = "cutButton" type = "button" value = "ShortCut">
+      </form>
+      <ol>
+         <li><img id = "die1" src = "blank.png" alt = "blank image"></li>
+         <li><img id = "die2" src = "blank.png" alt = "blank image"></li>
+         <li><img id = "die3" src = "blank.png" alt = "blank image"></li>
+         <li><img id = "die4" src = "blank.png" alt = "blank image"></li>
+      </ol>
+	  <div id ="demo"></div>
+   </body>
+</html>
