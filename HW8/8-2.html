@@ -1,18 +1,19 @@
 <!DOCTYPE html>
+<meta charset="UTF-8" />
 <html>
    <head>
       <title>hw8-2</title> 
 	  <style type = "text/css">
-	  body{font-family:·L³n¥¿¶ÂÅé;}
+	  body{font-family:å¾®è»Ÿæ­£é»‘é«”;}
 	  p{color:blue;}
 	  </style>
       <script>
          // variables used to interact with the img elements
 		 var photo = ['01','02','03','04','05','06','07','08','09','10'];
-		 var b = ["¥ô·Nªù","®É¥ú¾÷","¦Ë»f¸»","®É¥ú¥¬","°O¾ĞÄÑ¥]","ÁY¤p¿O","Â½Ä¶ã¯ãÀ","¦pªG¹q¸Ü«F","¬ï³zÀô","§ó¦ç·Ó¬Û¾÷"];
+		 var b = ["ä»»æ„é–€","æ™‚å…‰æ©Ÿ","ç«¹èœ»èœ“","æ™‚å…‰å¸ƒ","è¨˜æ†¶éºµåŒ…","ç¸®å°ç‡ˆ","ç¿»è­¯è’Ÿè’»","å¦‚æœé›»è©±äº­","ç©¿é€ç’°","æ›´è¡£ç…§ç›¸æ©Ÿ"];
          function start()
          {
-			document.getElementById("demo2").innerHTML = "½Ğ«ö¤UButton©â¥X¹D¨ã";
+			document.getElementById("demo2").innerHTML = "è«‹æŒ‰ä¸‹ButtonæŠ½å‡ºé“å…·";
             var button = document.getElementById( "DG" );
             button.addEventListener( "click", getDG, false );
 			var productSound = document.getElementById( "productSound");
@@ -21,7 +22,7 @@
 
          function getDG()
          {
-			document.getElementById("demo2").innerHTML = "½Ğ«ö¤UButton©â¥X¹D¨ã";
+			document.getElementById("demo2").innerHTML = "è«‹æŒ‰ä¸‹ButtonæŠ½å‡ºé“å…·";
 			document.getElementById("demo").innerHTML = "<img src='blank.png'>"; //initial photo
 			play_click();
          }
@@ -29,7 +30,7 @@
 		 {
 			var i = Math.floor(Math.random() * 10 );
 			document.getElementById("demo").innerHTML = "<img src='" + photo[i] + ".png'>";
-			document.getElementById("demo2").innerHTML = "<p>±z©â¨ì"+b[i] + "</p>";
+			document.getElementById("demo2").innerHTML = "<p>æ‚¨æŠ½åˆ°"+b[i] + "</p>";
 		 }
 		 function play_click()
 		 {
@@ -45,7 +46,7 @@
 	</audio>   
 	  <div id ="demo"><img src='blank.png'></div>
 	  <form action = "#">
-         <input id = "DG" type = "button" value = "©â¹D¨ã¡I" style ="width: 200px; margin-top:10px;">
+         <input id = "DG" type = "button" value = "æŠ½é“å…·ï¼" style ="width: 200px; margin-top:10px;">
       </form>
 	  <div id = "demo2"></div>
    </body>
